@@ -1,0 +1,5 @@
+#define PROFILE_SELECT_PIN_COUNT 4
+#define PROFILE_SELECT_PINS {2, 3, 4, 5}
+#define SPEED_SELECT_PIN_COUNT 4
+#define SPEED_SELECT_PINS {6, 7, 8, 9}
+#define PWM_PIN 10

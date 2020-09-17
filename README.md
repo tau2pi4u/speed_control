@@ -27,3 +27,7 @@ To increase the number of speeds/profiles it is possible to select, add extra pi
 
 ## Associated Circuity
 Hopefully you're finding this because you've come from a page which describes it, but I'll try to get a diagram/link to show how to construct the circuit into which this fits.
+
+## Smooth Stepping
+Smooth stepping is enabled by default. To change the transition time, change TRANS_TIME. To set a maximum rate of change, define MAX_STEP and change the value MAX_STEP to change the maximum step per loop and LOOP_DELAY to set the minimum loop time. The maximum rate of change will be:  
+`5000mV * (MAX_STEP / 255) / (LOOP_DELAY * 1000 * 1s)`mV/s

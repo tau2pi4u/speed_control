@@ -198,10 +198,12 @@ void loop()
     uint8_t profile_idx = get_profile_idx();
     uint8_t target_speed = get_speed(profile_idx, speed_idx);
 
+
 // With smooth step it will interpolate between speeds
 #if defined(SMOOTH_STEP)
     prev_speed = get_speed(target_speed, get_trans_time(profile_idx), get_max_step(profile_idx));
-    set_speed(prev_speed);
+    uint8_t min_speed = get_speed(profile_idx, 1);
+    set_speed(prev_speed * (min_speed < prev_speed));
 // Without smooth step, it immediately impacts the output
 #else
     set_speed(target_speed);

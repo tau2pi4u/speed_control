@@ -4,7 +4,7 @@ An arduino project to support a larger circuit for model railway speed control. 
 
 ## Requirements
 * Requires python 3.6 or higher
-* Requires pandas library (`pip install pandas`)
+* Requires pandas and numpy library (`python -m pip install -r requirements.txt`)
 * Arduino IDE
 * Arduino Nano (or equivalent)
 

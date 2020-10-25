@@ -68,7 +68,7 @@ uint8_t get_speed_idx()
     return speed;
 }
 
-uint8_t * get_profile(uint8_t profile_idx)
+const uint8_t * get_profile(uint8_t profile_idx)
 {
     if(profile_idx < PROFILE_COUNT)
     {
@@ -82,7 +82,7 @@ uint8_t * get_profile(uint8_t profile_idx)
 
 uint8_t get_speed(uint8_t profile_idx, uint8_t speed_idx)
 {
-    uint8_t * profile = get_profile(profile_idx);
+    const uint8_t * profile = get_profile(profile_idx);
     if(profile == nullptr) { return 0; }
     if(speed_idx < SPEED_COUNT) { return profile[speed_idx]; }
     return profile[SPEED_COUNT-1];

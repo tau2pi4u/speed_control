@@ -21,7 +21,6 @@ except:
 	print("Didn't find transition time")
 
 profile_count, speed_count = df.shape
-profile_count -= 1
 speed_count -= (1 + max_step + trans_time)
 
 print(f"Found {profile_count} profiles with {speed_count} speeds")
